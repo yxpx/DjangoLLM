@@ -13,14 +13,14 @@ From the repo root:
 
 ```pwsh
 cd backend
-# create & activate venv with uv (this repo keeps the venv in `backend/`)
+# create & activate venv with uv
 uv venv
 
 # PowerShell activation:
-. .\Scripts\Activate.ps1
+. .venv\Scripts\Activate.ps1
 
 # install deps
-uv pip install django djangorestframework django-cors-headers pillow ollama
+uv pip install -r requirements.txt
 
 # Run migrations
 python DjangoLLM/manage.py makemigrations
